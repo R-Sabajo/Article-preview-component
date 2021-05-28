@@ -2,6 +2,7 @@ const shareButton = document.getElementById('share_icon');
 const shareButtonClose = document.getElementById('share_icon_close');
 const socialElement = document.getElementById('social');
 
+// Function to show the social media icons
 shareButton.addEventListener('click', e => {
   socialElement.classList.remove('hidden');
   socialElement.classList.remove('hide');
@@ -11,6 +12,7 @@ shareButton.addEventListener('click', e => {
   shareButtonClose.classList.add('visible');
 });
 
+// Function to close the social media icons
 shareButtonClose.addEventListener('click', e => {
   socialElement.classList.add('hide');
   socialElement.classList.remove('show');
