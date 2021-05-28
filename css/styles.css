@@ -12,7 +12,6 @@
 }
 
 body {
-  box-sizing: border-box;
   align-items: center;
   background-color: var(--Light-Grayish-Blue);
   display: flex;
@@ -27,7 +26,7 @@ body {
 /* TAGS */
 
 h1 {
-  --Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  color: var(--Dark-Grayish-Blue);
   margin: 0;
   line-height: 1.5;
   font-size: 20px;
@@ -35,7 +34,7 @@ h1 {
 }
 
 h2 {
-  --Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  color: var(--Dark-Grayish-Blue);
   font-size: 13px;
   margin: 0;
   line-height: 1.4;
@@ -114,15 +113,17 @@ p {
   padding: 10px 12px 10px 9px;
   bottom: 27px;
   right: 34px;
-  transition: opacity 400ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .share_icon:hover {
   background-color: var(--Dark-Blue);
+  transition: background-color 300ms ease-in-out;
 }
 
 .share_icon:hover svg path {
   fill: var(--Light-Grayish-Blue);
+  transition: fill 300ms ease-in-out;
 }
 
 .share_icon_close {
@@ -131,13 +132,12 @@ p {
   background-color: var(--Dark-Blue);
   width: 33px;
   height: 33px;
-  transform: scale(1.07);
+  transform: scale(1);
   padding: 10px 12px 10px 9px;
   bottom: 27px;
-  right: 34.5px;
+  right: 34px;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 400ms ease-in-out;
 }
 
 .share_icon_close svg path {
@@ -297,10 +297,6 @@ p {
   /* SOCIAL */
 
   .share_icon {
-    width: 33px;
-    height: 33px;
-    transform: scale(1);
-    padding: 10px 12px 10px 9px;
     bottom: 19px;
     right: 35px;
     transition: opacity 400ms ease-in-out;
@@ -309,13 +305,9 @@ p {
   .share_icon_close {
     width: 33px;
     height: 33px;
-    transform: scale(1.07);
-    padding: 10px 12px 10px 9px;
+    transform: scale(1);
     bottom: 19px;
-    right: 34.5px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 400ms ease-in-out;
+    right: 35px;
   }
 
   .social {
@@ -329,57 +321,8 @@ p {
     padding: 25px 30px;
   }
 
-  @keyframes move-up {
-    0% {
-      opacity: 0;
-      transform: translateY(70px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-
-  @keyframes move-down {
-    0% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translateY(70px);
-    }
-  }
-
-  .hidden {
-    opacity: 0;
-    transform: translateY(70px);
-  }
-
-  .show {
-    animation: move-up 400ms cubic-bezier(0, 0.7, 0, 0.88) forwards;
-  }
-
-  .visible {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .hide {
-    animation: move-down 400ms cubic-bezier(0.7, 0, 0.84, 0) forwards;
-  }
-
-  .social__text {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    color: var(--Grayish-Blue);
-  }
-
   .social__icons img {
-    margin-left: 17px;
+    margin-left: 20px;
     transform: scale(1.1);
   }
 }
